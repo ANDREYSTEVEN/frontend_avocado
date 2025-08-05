@@ -35,7 +35,7 @@ import RutaProtegida from "./components/RutaProtegida";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/frontend_avocado">
       <Routes>
         {/* Rutas públicas */}
         <Route path="/" element={<Home />} />
