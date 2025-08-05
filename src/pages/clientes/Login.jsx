@@ -14,7 +14,7 @@ export default function Login() {
     setError(null);
 
     try {
-      const response = await fetch("https://your-backend-url.onrender.com/api/clientes/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

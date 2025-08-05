@@ -21,7 +21,7 @@ export default function Editar() {
       return;
     }
 
-    fetch(`https://your-backend-url.onrender.com/api/productos/${id}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/api/productos${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -44,7 +44,7 @@ export default function Editar() {
     setError(null);
 
     try {
-      const res = await fetch(`https://your-backend-url.onrender.com/api/productos/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/productos${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

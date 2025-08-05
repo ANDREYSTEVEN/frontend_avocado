@@ -8,7 +8,7 @@ export default function Listar() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("https://your-backend-url.onrender.com/api/pedidos", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

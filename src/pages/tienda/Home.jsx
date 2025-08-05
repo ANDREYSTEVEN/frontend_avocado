@@ -6,7 +6,7 @@ export default function Home() {
   const [mensaje, setMensaje] = useState(null);
 
   useEffect(() => {
-    fetch("https://your-backend-url.onrender.com/api/productos")
+    fetch(`${import.meta.env.VITE_API_URL}/api/productos`)
       .then((res) => {
         if (!res.ok) throw new Error("No se pudo cargar productos");
         return res.json();

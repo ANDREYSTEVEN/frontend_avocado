@@ -22,7 +22,7 @@ export default function Confirmar() {
     }
 
     try {
-      const response = await fetch("https://your-backend-url.onrender.com/api/pedidos", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

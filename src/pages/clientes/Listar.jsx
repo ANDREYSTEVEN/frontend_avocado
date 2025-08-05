@@ -12,7 +12,7 @@ export default function Listar() {
       return;
     }
 
-    fetch("https://your-backend-url.onrender.com/api/clientes/mis-pedidos", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

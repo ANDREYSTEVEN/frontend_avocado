@@ -10,7 +10,7 @@ export default function Listar() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("https://your-backend-url.onrender.com/api/productos", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -27,7 +27,7 @@ export default function Listar() {
     if (!confirm("¿Estás seguro de que deseas eliminar este producto?")) return;
 
     try {
-      const res = await fetch(`https://your-backend-url.onrender.com/api/productos/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/productos${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

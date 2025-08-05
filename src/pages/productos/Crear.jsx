@@ -16,7 +16,7 @@ export default function Crear() {
     setError(null);
 
     try {
-      const res = await fetch("https://your-backend-url.onrender.com/api/productos", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
